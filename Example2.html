@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>v-bind font-size</title>
+  <style>
+  div {
+      width: 200px;
+      padding: 20px;
+      border: black 1px;
+      background-color: lightpink;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Font Size Example</h1>
+
+<div id="app">
+  <div v-bind:style="{ fontSize: size }"> example</div>
+</div>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+  const app = Vue.createApp({
+   data() {
+    return {
+      size: '28px'
+    }
+   }
+  })
+  app.mount('#app')
+</script>
+
+</body>
+</html>

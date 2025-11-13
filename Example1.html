@@ -1,0 +1,27 @@
+=> add a random number to the message inside the div element:
+
+<!Doctype html>
+<html>
+    <head>
+        <title>Example</title>
+    </head>
+    <body>
+        <div id="app">
+            {{message}}<br>
+            {{'Random number: ' + Math.ceil(Math.random()*6)}}
+        </div>
+        
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+        <script>
+            const app = Vue.createApp ({
+                data() {
+                    return {
+                        message: "hello world!"
+                    }
+                }
+            })
+            app.mount('#app')
+        </script>
+    </body>
+</html>
