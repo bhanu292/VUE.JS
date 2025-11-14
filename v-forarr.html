@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Loop Through an Array</title>
+    </head>
+    <body>
+        <div id="app">
+            <div>
+                <img v-for="'x in manyFoods" v-bind:src="x">
+            </div>    
+        </div>
+
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script>
+            const app = Vue.createApp ( {
+                data () {
+                    return {
+                        manyFoods: [
+                            '1.jpg'
+                        ]
+                    }
+                }
+            })
+            app.mount('#app')
+        </script>
+    </body>
+</html>
