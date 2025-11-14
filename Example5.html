@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My App</title>
+    </head>
+    <body>
+        <h1>comaparison to decide whether to write in stock,very few left or not in stock dpending on the number of typeriter in storage. </h1>
+
+        <div id="app">
+            <p v-if="typeriterCount>4">
+                In stock
+            </p>
+            <p v-else-if="typeriterCount>0">
+                Very few left.
+            </p>
+            <p v-else>
+                Not in stock
+            </p>
+        </div>
+
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script>
+            const app = Vue.createApp ( {
+                data () {
+                    return {
+                        typeriterCount: 4
+                    }
+                }
+            })
+            app.mount('#app')
+        </script>
+    </body>
+</html>

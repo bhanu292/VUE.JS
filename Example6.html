@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My App</title>
+    </head>
+    <body>
+        <h1>Use The Return Value From a Function</h1>
+
+        <div id="app">
+            <P v-if="text.includes('pizza')">The Text Includes The Word 'Pizza'.
+            </P>
+            <p v-else>The Word 'pizza' is not found in the text.
+            </p>
+        </div>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script>
+            const app = Vue.createApp ({
+                data () {
+                    return {
+                        text:'I Like taco,pizza, Thai beef salad, pho soup and tagine.'
+                    }
+                }
+            })
+            app.mount('#app')
+        </script>
+    </body>
+</html>
