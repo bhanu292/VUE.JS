@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Directive</title>
+    </head>
+    <body>
+        <div id="app">
+            <button v-on:click.once="createAlert">CreateAlert</button>
+        </div>
+
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+    const app = Vue.createApp ({
+     methods: {
+        createAlert() {
+            alert("welcome")
+        }
+     }
+    })
+    app.mount('#app')
+</script>
+    </body>
+</html>
