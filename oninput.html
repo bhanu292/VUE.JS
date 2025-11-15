@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Count Input</title>
+    </head>
+    <body>
+        <h1>Example of oninput event</h1>
+        <div id="app">
+            <input type="text" v-on:input="inpCount++"placeholder="Start writing..">
+            <p>{{'input text:'+inpCount }}</p>
+        </div>
+
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script>
+            const app = Vue.createApp ({
+                data () {
+                    return {
+                        inpCount:0
+                    }
+                }
+            })
+            app.mount('#app')
+        </script>
+    </body>
+</html>
