@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Moose Count</title>
+    </head>
+    <style>
+        #app {
+            border: dashed black 1px;
+            width: 250px;
+            padding: 10px;
+        }
+        img {
+            width: 100%;
+        }
+        button {
+            margin: 10px;
+            padding: 5px 10px;
+        }
+    </style>
+    <body>
+        <h1>Passing Arguments with Methods</h1>
+        <div id="app">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFPsG2pbMCSBdorUIAdnmuGkU0u4HCrUiDiw&s" width="770" height="549">
+            <p>{{ "Moose count: " +count }}</p>
+            <button v-on:click="addMoose(1)">+1</button>
+            <button v-on:click="addMoose(7)">+7</button>
+            <button v-on:click="addMoose(-1)">-1</button>
+        </div>
+
+       <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+    const app = Vue.createApp ({
+        data () {
+            return {
+                count:0
+            }
+        },
+        methods: {
+            addMoose(number) {
+                this.count+=number 
+            }
+        }
+    })
+    app.mount('#app')
+</script> 
+    </body>
+</html>
