@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>S key Generate Alert</title>
+    </head>
+    <body>
+        <div id="app">
+            <textarea cols="20" rows="3" v-on:keyDown.s="createAlert" placeholder="Write Here"></textarea>
+        </div>
+
+     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script> 
+    const app = Vue.createApp ({
+        methods: {
+            createAlert(evt) {
+                alert("You pressed the 'S' key!");
+            }
+        }
+    })
+    app.mount('#app')
+</script>   
+    </body>
+</html>
