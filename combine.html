@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Combine  S & ctrl Key</title>
+    </head>
+    <body>
+        <h1>Example : Press S and Ctrl key in combination</h1>
+
+        <div id="app">
+            <textarea cols="20" rows="4" v-on:keydown.ctrl.s="createAlert" placeholder="write here"></textarea>
+        </div>
+
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+    const app = Vue.createApp ({
+        methods: {
+            createAlert(evt) {
+                alert("you press the 'S' and 'Ctrl' key in combination!")
+            }
+        }
+    })
+    app.mount('#app')
+</script>
+    </body>
+</html>
