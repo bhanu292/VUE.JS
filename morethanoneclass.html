@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Multiple Classes with v-bind:class</title>
+         <style>
+    .impClass {
+      font-weight: bolder;
+    }
+    .yelClass {
+      background-color: rgb(255, 255, 136);
+    }
+    #app > div {
+      border: dashed black 1px;
+      width: 200px;
+      margin: 20px;
+      padding: 20px;
+    }
+  </style>
+    </head>
+    <body>
+        <h1>Example</h1>
+        <div id="app">
+            <div v-bind:class="{ yelClass: isYellow, impClass: isImportant }">This can belong to both 'impClass' and 'yelClass' depending an the 'isYellow' and 'isImportant' Vue properties</div>
+        </div>
+
+     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+     <script>
+        const app = Vue.createApp ({
+            data () {
+                return {
+                    isYellow: true,
+                    isImportant: true 
+                }
+            }
+        })
+        app.mount('#app')
+     </script>
+    </body>
+</html>
