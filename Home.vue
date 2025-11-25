@@ -1,38 +1,25 @@
 <template>
-<h1>Email: {{ email }}</h1>
-<h1>Name: {{ getName() }}</h1>
-<h1>Name: {{ getNick("Bhanu") }}</h1>
-<h1>Name 2: {{ getNick("Alisha") }}</h1>
-<h1>All Data:{{ getData() }}</h1>
-<h1>All Data: {{ getData().name }}</h1>
-<h1>All Data: {{ getData().email }}</h1>
+<h1>Home Component{{ 10+10 }}</h1>
+<h1>Home Component{{ 'hello'.length }}</h1>
+<h1>Email:{{ email }}</h1>
+<h1>Mobile:{{ mobile }}</h1>
+<h1>Mobile:{{ mobile==7535051925 }}</h1>
+<h1>Name:{{ getName() }}</h1>
 
 </template>
 
 <script>
 export default {
     name: 'Home',
-    data() {
+    data () {
         return {
-            email: 'bharat123tiwari123@gmail.com'
-        }
-    },
-    methods:{
-        getName() {
+        email:'bharat123tiwari123@gmail.com',
+        mobile: 9389591306,
+        getName: function() {
             return "Bharat Tiwari"
-        },
-        getNick(name){
-            return name;
-        },
-        getData() {
-            return {
-                name:"Akhil",
-                email:"akhil@gmail.com",
-               // email:this.email
-
-            }
         }
     }
+}
 }
 </script>
 
